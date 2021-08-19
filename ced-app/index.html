@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiosk Login</title>
+    <link rel="icon" href="http://example.com/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body onload="funcTodaysDateAndTime()" class=" tracking-tight select-none">
+
+    <div class="mainWrapper m-auto">
+        <div class="formContainer bg-white p-5 text-left">
+            <!-- HEADER -- LOGO & BUTTON -->
+            <div class="header">
+                <button id="btn1"
+                    class="btn border-4 border-blue-900 bg-blue-900 hover:bg-blue-700 hover:border-blue-700 text-white px-2 py-1 rounded text-xs float-right">ExponentHR
+                    Login</button>
+                <div class=""> <a href="https://www.exponenthr.com/service/Kiosklogon.asp?kmachid=273892"
+                        class="link"><img class=" inline"
+                            src="https://www.exponenthr.com/service/logos/00630CONSOLIDATEDELECTRICALDISTRIBUTORSINC.jpg"
+                            alt=""></a></div>
+            </div>
+            <!--BODY BEGINS-->
+            <div class="body mt-7 border border-1 border-blue-900 rounded relative">
+                <div class="w-full bg-blue-900 text-white  px-2 py-2  border border-blue-900">
+                    <h1 class="capitalize text-sm
+                    ">time clock kiosk</h1>
+                </div>
+                <div class="p-6 flex" style="font-size:11.5px!important">
+                    <div class="firstBodySection  w-36">
+                        <div><span>Company:</span></div>
+                        <div><span>Company ID:</span></div>
+                        <div><span>Kiosk Name:</span></div>
+                        <div class="pt-8"><span>Date/Time:</span></div>
+                        <div class="pt-6"><span>User Pin:</span></div>
+
+                    </div>
+                    <div class="firstBodySection w-full">
+                        <div><span>CONSOLIDATED ELECTRICAL DISTRIBUTORS, INC.</span></div>
+                        <div><span>00630</span></div>
+                        <div><span>Pacific Time Zone</span></div>
+                        <div class="pt-6">
+                            <div class="border rounded border-blue-800 py-1 px-2 relative "><Span
+                                    id="todaysDateAndTimeText" class=""></Span> <button id="btn2"
+                                    class="btn border border-blue-900 submit bg-blue-900 hover:bg-blue-700 text-white text-sm py-1 px-5 rounded absolute right-0 top-6 mt-4">submit</button>
+                            </div>
+                        </div>
+                        <form class="mt-3 w-48 relative" autocomplete="off">
+                            <input autofocus id="userPIN" type="password" maxlength="6"
+                                class="tracking-tighter userPIN p-1 w-full text-sm focus:outline-none rounded border border-blue-800">
+                            <div class="cursor-pointer"> <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                    data-icon="keyboard"
+                                    class="keyboard h-5 fill-current text-blue-900 absolute right-1 top-1 mt-0.5"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                        d="M528 448H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h480c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48zM128 180v-40c0-6.627-5.373-12-12-12H76c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm-336 96v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm-336 96v-40c0-6.627-5.373-12-12-12H76c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm288 0v-40c0-6.627-5.373-12-12-12H172c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h232c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12z">
+                                    </path>
+                                </svg></div>
+                        </form>
+                        <div
+                            class="keypad grid gap-2 grid-cols-3 grid-rows-4 w-48 border border-blue-900 rounded p-2 mt-2">
+                            <span
+                                class="bg-blue-900 flex items-center justify-center text-lg text-white rounded h-14">1</span>
+                            <span
+                                class="bg-blue-900 flex items-center justify-center text-lg text-white rounded h-14">2</span><span
+                                class="bg-blue-900 flex items-center justify-center text-lg text-white rounded h-14">3</span><span
+                                class="bg-blue-900 flex items-center justify-center text-lg text-white rounded h-14">4</span><span
+                                class="bg-blue-900 flex items-center justify-center text-lg text-white rounded h-14">5</span><span
+                                class="bg-blue-900 flex items-center justify-center text-lg text-white rounded h-14">6</span><span
+                                class="bg-blue-900 flex items-center justify-center text-lg text-white rounded h-14">7</span><span
+                                class="bg-blue-900 flex items-center justify-center text-lg text-white rounded h-14">8</span><span
+                                class="bg-blue-900 flex items-center justify-center text-lg text-white rounded h-14">9</span>
+                            <span class="bg-blue-900 flex items-center justify-center text-lg text-white rounded h-14">
+                                << </span> <span
+                                        class="bg-blue-900 flex items-center justify-center text-lg text-white rounded h-14">0</span>
+                                    <span
+                                        class="bg-blue-900 flex items-center justify-center text-lg text-white rounded h-14">Del</span>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div id="POPUP" onclick="redirectToCorrectLogins()" class="fixed inset-0 h-screen w-screen flex items-center
+            justify-center hidden">
+            <div disabled
+                class="select-none pt-10 px-30 font-mono flex flex-col popup bg-white w-2/3 h-2/3 transition shadow-2xl rounded-3xl text-center">
+                <div class=" lg:px-40 px-20
+                ">
+                    <h1 class="bg-yellow-100 text-5xl">TERMINATED.</h1>
+                    <p class="text-sm mt-5">UNFORTUNETLY, YOU'VE BEEN <u class="bg-yellow-100">TERMINATED</u>. WE HAVE
+                        PROOF
+                        BEYOND REASONABLE
+                        DOUBT AND SUSPICION OF YOU <u>(FORMER EMPLOYEE)</u> TO BE SCRATCHING THEIR <b>ASS</b> IN THE
+                        WORK
+                        ENVIORNMENT,
+                        <B>THEN</B> SNIFFYING THEIR FINGERS WITH GUILT SATISFACTION.
+                    </p>
+                    <p class="mt-5 text-sm">PLEASE PROCEED TO GIVE TALi SIONE $10,000 TO GET JOB BACK. </p>
+                    <iframe src="https://giphy.com/embed/a2fVCj2CudIiY" width="480" height="225" frameBorder="0"
+                        class=" w-full mt-10" allowFullScreen></iframe>
+                </div>
+
+            </div>
+        </div>
+</body>
+<script src="scripts.js"></script>
+</body>
+
+</html>

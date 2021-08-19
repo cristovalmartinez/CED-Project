@@ -1,0 +1,12 @@
+.userPIN:focus {
+  box-shadow: 0 0 2px rgb(7, 7, 172);
+}
+
+body {
+  background: #cccccc !important;
+  font-family: "roboto", sans-serif;
+}
+
+.mainWrapper {
+  max-width: 600px;
+}
